@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Productos y Servicios — Catálogo completo | Biblioteca Aurora</title>
+  <meta name="description" content="Catálogo de servicios de Biblioteca Aurora: préstamo de libros, biblioteca digital 24/7, salas de estudio, clubes de lectura, cursos y eventos culturales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-aurora fixed-top" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Biblioteca <span>Aurora</span></a>
+      <input type="checkbox" id="navToggle" class="nav-check visually-hidden" aria-label="Abrir menú">
+      <label class="navbar-toggler border-0" for="navToggle"><i class="fa-solid fa-bars fa-lg" style="color:var(--ink)"></i></label>
+      <div class="navbar-collapse" id="mainNav">
+        <form class="buscador me-lg-3 my-3 my-lg-0" role="search" action="productos.html" method="get">
+          <label for="buscador" class="visually-hidden">Buscar libros</label>
+          <input type="search" id="buscador" name="q" class="buscador__input" placeholder="Buscar libros…" autocomplete="off">
+          <button type="submit" class="buscador__btn" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link active" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="nav-link btn-nav" href="contacto.html"><i class="fa-solid fa-book-open-reader me-2"></i>Hazte socio</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main id="contenido">
+  <!-- ===== Hero de página ===== -->
+  <header class="page-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb"><ol class="breadcrumb mb-3"><li class="breadcrumb-item"><a href="index.html">Inicio</a></li><li class="breadcrumb-item active">Productos</li></ol></nav>
+      <div class="col-lg-7">
+        <span class="eyebrow">Catálogo de servicios</span>
+        <h1 class="section-title mb-3">Servicios diseñados para ti</h1>
+        <p class="lead-text">Del préstamo clásico a la biblioteca digital, cada servicio está pensado para que leer y aprender sea más fácil que nunca.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Filtros ===== -->
+  <section class="pt-4 pb-2">
+    <div class="container">
+      <div class="d-flex flex-wrap gap-2 justify-content-center reveal">
+        <input type="radio" name="cat" id="f-todos" class="visually-hidden" checked><label class="filter-btn" for="f-todos">Todos</label>
+        <input type="radio" name="cat" id="f-prestamo" class="visually-hidden"><label class="filter-btn" for="f-prestamo">Préstamo</label>
+        <input type="radio" name="cat" id="f-espacios" class="visually-hidden"><label class="filter-btn" for="f-espacios">Espacios</label>
+        <input type="radio" name="cat" id="f-digital" class="visually-hidden"><label class="filter-btn" for="f-digital">Digital</label>
+        <input type="radio" name="cat" id="f-comunidad" class="visually-hidden"><label class="filter-btn" for="f-comunidad">Comunidad</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Catálogo ===== -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4">
+
+        <div class="col-md-6 col-lg-4 reveal" data-category="prestamo">
+          <article class="service-card">
+            <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=900&auto=format&fit=crop" alt="Préstamo de libros en físico"></div>
+            <div class="card-body">
+              <span class="badge-cat mb-3">Préstamo</span>
+              <h2 class="h5 mt-2">Préstamo de libros físicos</h2>
+              <p class="small text-secondary flex-grow-1">Hasta 5 títulos simultáneos por 30 días, renovables online. Incluye recomendaciones personalizadas de nuestro equipo.</p>
+              <a href="contacto.html" class="link-arrow">Consultar disponibilidad <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" data-category="digital">
+          <article class="service-card">
+            <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=900&auto=format&fit=crop" alt="Biblioteca digital de eBooks"></div>
+            <div class="card-body">
+              <span class="badge-cat mb-3">Digital</span>
+              <h2 class="h5 mt-2">Biblioteca digital 24/7</h2>
+              <p class="small text-secondary flex-grow-1">15.000 eBooks y 3.000 audiolibros accesibles desde tablet, móvil o ordenador. Descarga sin límites con tu carnet.</p>
+              <a href="contacto.html" class="link-arrow">Acceder a la plataforma <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" data-category="espacios">
+          <article class="service-card">
+            <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=900&auto=format&fit=crop" alt="Sala de estudio silenciosa"></div>
+            <div class="card-body">
+              <span class="badge-cat mb-3">Espacios</span>
+              <h2 class="h5 mt-2">Sala de estudio 24/7</h2>
+              <p class="small text-secondary flex-grow-1">120 puestos con luz natural, wifi gigabit, enchufes en cada mesa y control de silencio. Reserva online por franjas.</p>
+              <a href="contacto.html" class="link-arrow">Reservar puesto <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" data-category="comunidad">
+          <article class="service-card">
+            <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=900&auto=format&fit=crop" alt="Clubes de lectura"></div>
+            <div class="card-body">
+              <span class="badge-cat mb-3">Comunidad</span>
+              <h2 class="h5 mt-2">Clubes de lectura</h2>
+              <p class="small text-secondary flex-grow-1">12 grupos activos por género e idioma, con encuentros semanales y un club juvenil moderado por escritores invitados.</p>
+              <a href="contacto.html" class="link-arrow">Unirme a un club <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" data-category="espacios">
+          <article class="service-card">
+            <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?q=80&w=900&auto=format&fit=crop" alt="Talleres y actividades infantiles"></div>
+            <div class="card-body">
+              <span class="badge-cat mb-3">Espacios</span>
+              <h2 class="h5 mt-2">Zona infantil y talleres</h2>
+              <p class="small text-secondary flex-grow-1">Un rincón de 400 m² con cuentacuentos los sábados, talleres de escritura creativa y juegos de lectura para niños de 3 a 12 años.</p>
+              <a href="contacto.html" class="link-arrow">Ver calendario <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" data-category="digital">
+          <article class="service-card">
+            <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=900&auto=format&fit=crop" alt="Formación digital y cursos"></div>
+            <div class="card-body">
+              <span class="badge-cat mb-3">Digital</span>
+              <h2 class="h5 mt-2">Cursos y formación</h2>
+              <p class="small text-secondary flex-grow-1">Talleres de alfabetización digital, búsqueda académica y escritura. Presenciales y en streaming, con certificado incluido.</p>
+              <a href="contacto.html" class="link-arrow">Inscribirme <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" data-category="prestamo">
+          <article class="service-card">
+            <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1476275466078-4007374efbbe?q=80&w=900&auto=format&fit=crop" alt="Entrega a domicilio de libros"></div>
+            <div class="card-body">
+              <span class="badge-cat mb-3">Préstamo</span>
+              <h2 class="h5 mt-2">Entrega a domicilio</h2>
+              <p class="small text-secondary flex-grow-1">Socios mayores de 65 años y personas con movilidad reducida: pedidos por teléfono o web con entrega en 48 horas.</p>
+              <a href="contacto.html" class="link-arrow">Solicitar entrega <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" data-category="comunidad">
+          <article class="service-card">
+            <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=900&auto=format&fit=crop" alt="Eventos culturales y encuentros con autores"></div>
+            <div class="card-body">
+              <span class="badge-cat mb-3">Comunidad</span>
+              <h2 class="h5 mt-2">Eventos culturales</h2>
+              <p class="small text-secondary flex-grow-1">Más de 320 actividades al año: presentaciones de libros, encuentros con autores, cine-forum y noches de poesía.</p>
+              <a href="contacto.html" class="link-arrow">Próximos eventos <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal" data-category="digital">
+          <article class="service-card">
+            <div class="img-wrap"><img loading="lazy" src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=900&auto=format&fit=crop" alt="Hemeroteca y archivo digital"></div>
+            <div class="card-body">
+              <span class="badge-cat mb-3">Digital</span>
+              <h2 class="h5 mt-2">Hemeroteca digital</h2>
+              <p class="small text-secondary flex-grow-1">Acceso a 200 años de prensa local digitalizada, ideal para investigadores, estudiantes y genealogistas.</p>
+              <a href="contacto.html" class="link-arrow">Explorar archivo <i class="fa-solid fa-arrow-right ms-1"></i></a>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Catálogo de libros ===== -->
+  <section class="py-5" id="libros" style="background:var(--white)">
+    <div class="container">
+      <div class="row justify-content-center text-center mb-4">
+        <div class="col-lg-7">
+          <span class="eyebrow">Catálogo</span>
+          <h2 class="section-title">Nuestros libros</h2>
+          <p class="lead-text mx-auto">Explora el catálogo por género, ordénalo a tu gusto o usa el buscador de arriba.</p>
+        </div>
+      </div>
+
+      <!-- Barra de filtros (los ids son los "ganchos" para js/filtros.js) -->
+      <div class="filtros-libros mb-4" role="group" aria-label="Filtros del catálogo">
+        <div class="filtros-libros__campo">
+          <label for="filtro-genero" class="form-label">Género</label>
+          <select id="filtro-genero" class="form-control-aurora"><option value="todos">Todos los géneros</option><option value="narrativa">Narrativa</option><option value="ciencia">Ciencia</option><option value="historia">Historia</option><option value="infantil">Infantil</option><option value="poesia">Poesía</option><option value="tecnologia">Tecnología</option></select>
+        </div>
+        <div class="filtros-libros__campo">
+          <label for="orden" class="form-label">Ordenar por</label>
+          <select id="orden" class="form-control-aurora">
+            <option value="titulo-asc">Título (A–Z)</option>
+            <option value="titulo-desc">Título (Z–A)</option>
+            <option value="autor-asc">Autor (A–Z)</option>
+            <option value="anio-desc">Año (más reciente)</option>
+            <option value="anio-asc">Año (más antiguo)</option>
+            <option value="paginas-asc">Páginas (menos a más)</option>
+          </select>
+        </div>
+        <div class="filtros-libros__campo filtros-libros__campo--check">
+          <input class="form-check-input" type="checkbox" id="solo-disponibles">
+          <label class="form-check-label" for="solo-disponibles">Solo disponibles</label>
+        </div>
+        <p class="filtros-libros__total mb-0" id="total-libros" aria-live="polite"><strong>48</strong> libros</p>
+      </div>
+
+      <div class="row g-4" id="lista-libros">
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--narrativa" data-id="1" data-titulo="Cien años de soledad" data-autor="Gabriel García Márquez" data-genero="narrativa" data-anio="1967" data-paginas="471" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">C</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Narrativa</span>
+              <h3 class="libro__titulo">Cien años de soledad</h3>
+              <p class="libro__autor">Gabriel García Márquez</p>
+              <p class="libro__meta">1967 · 471 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--narrativa" data-id="2" data-titulo="Don Quijote de la Mancha" data-autor="Miguel de Cervantes" data-genero="narrativa" data-anio="1605" data-paginas="1056" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">D</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Narrativa</span>
+              <h3 class="libro__titulo">Don Quijote de la Mancha</h3>
+              <p class="libro__autor">Miguel de Cervantes</p>
+              <p class="libro__meta">1605 · 1056 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--narrativa" data-id="3" data-titulo="La sombra del viento" data-autor="Carlos Ruiz Zafón" data-genero="narrativa" data-anio="2001" data-paginas="576" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">L</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Narrativa</span>
+              <h3 class="libro__titulo">La sombra del viento</h3>
+              <p class="libro__autor">Carlos Ruiz Zafón</p>
+              <p class="libro__meta">2001 · 576 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--narrativa" data-id="4" data-titulo="Pedro Páramo" data-autor="Juan Rulfo" data-genero="narrativa" data-anio="1955" data-paginas="160" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">P</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Narrativa</span>
+              <h3 class="libro__titulo">Pedro Páramo</h3>
+              <p class="libro__autor">Juan Rulfo</p>
+              <p class="libro__meta">1955 · 160 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--narrativa" data-id="5" data-titulo="1984" data-autor="George Orwell" data-genero="narrativa" data-anio="1949" data-paginas="328" data-estado="prestado">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">1</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Narrativa</span>
+              <h3 class="libro__titulo">1984</h3>
+              <p class="libro__autor">George Orwell</p>
+              <p class="libro__meta">1949 · 328 págs.</p>
+              <span class="libro__estado libro__estado--prestado">Prestado</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--narrativa" data-id="6" data-titulo="El amor en los tiempos del cólera" data-autor="Gabriel García Márquez" data-genero="narrativa" data-anio="1985" data-paginas="368" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">E</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Narrativa</span>
+              <h3 class="libro__titulo">El amor en los tiempos del cólera</h3>
+              <p class="libro__autor">Gabriel García Márquez</p>
+              <p class="libro__meta">1985 · 368 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--narrativa" data-id="7" data-titulo="Rayuela" data-autor="Julio Cortázar" data-genero="narrativa" data-anio="1963" data-paginas="600" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">R</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Narrativa</span>
+              <h3 class="libro__titulo">Rayuela</h3>
+              <p class="libro__autor">Julio Cortázar</p>
+              <p class="libro__meta">1963 · 600 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--narrativa" data-id="8" data-titulo="La casa de los espíritus" data-autor="Isabel Allende" data-genero="narrativa" data-anio="1982" data-paginas="448" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">L</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Narrativa</span>
+              <h3 class="libro__titulo">La casa de los espíritus</h3>
+              <p class="libro__autor">Isabel Allende</p>
+              <p class="libro__meta">1982 · 448 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--ciencia" data-id="9" data-titulo="Cosmos" data-autor="Carl Sagan" data-genero="ciencia" data-anio="1980" data-paginas="396" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">C</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Ciencia</span>
+              <h3 class="libro__titulo">Cosmos</h3>
+              <p class="libro__autor">Carl Sagan</p>
+              <p class="libro__meta">1980 · 396 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--ciencia" data-id="10" data-titulo="Breve historia del tiempo" data-autor="Stephen Hawking" data-genero="ciencia" data-anio="1988" data-paginas="256" data-estado="prestado">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">B</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Ciencia</span>
+              <h3 class="libro__titulo">Breve historia del tiempo</h3>
+              <p class="libro__autor">Stephen Hawking</p>
+              <p class="libro__meta">1988 · 256 págs.</p>
+              <span class="libro__estado libro__estado--prestado">Prestado</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--ciencia" data-id="11" data-titulo="El gen egoísta" data-autor="Richard Dawkins" data-genero="ciencia" data-anio="1976" data-paginas="360" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">E</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Ciencia</span>
+              <h3 class="libro__titulo">El gen egoísta</h3>
+              <p class="libro__autor">Richard Dawkins</p>
+              <p class="libro__meta">1976 · 360 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--ciencia" data-id="12" data-titulo="El origen de las especies" data-autor="Charles Darwin" data-genero="ciencia" data-anio="1859" data-paginas="502" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">E</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Ciencia</span>
+              <h3 class="libro__titulo">El origen de las especies</h3>
+              <p class="libro__autor">Charles Darwin</p>
+              <p class="libro__meta">1859 · 502 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--ciencia" data-id="13" data-titulo="Una breve historia de casi todo" data-autor="Bill Bryson" data-genero="ciencia" data-anio="2003" data-paginas="544" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">U</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Ciencia</span>
+              <h3 class="libro__titulo">Una breve historia de casi todo</h3>
+              <p class="libro__autor">Bill Bryson</p>
+              <p class="libro__meta">2003 · 544 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--ciencia" data-id="14" data-titulo="Primavera silenciosa" data-autor="Rachel Carson" data-genero="ciencia" data-anio="1962" data-paginas="336" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">P</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Ciencia</span>
+              <h3 class="libro__titulo">Primavera silenciosa</h3>
+              <p class="libro__autor">Rachel Carson</p>
+              <p class="libro__meta">1962 · 336 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--ciencia" data-id="15" data-titulo="El universo elegante" data-autor="Brian Greene" data-genero="ciencia" data-anio="1999" data-paginas="448" data-estado="prestado">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">E</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Ciencia</span>
+              <h3 class="libro__titulo">El universo elegante</h3>
+              <p class="libro__autor">Brian Greene</p>
+              <p class="libro__meta">1999 · 448 págs.</p>
+              <span class="libro__estado libro__estado--prestado">Prestado</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--ciencia" data-id="16" data-titulo="Pálido punto azul" data-autor="Carl Sagan" data-genero="ciencia" data-anio="1994" data-paginas="384" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">P</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Ciencia</span>
+              <h3 class="libro__titulo">Pálido punto azul</h3>
+              <p class="libro__autor">Carl Sagan</p>
+              <p class="libro__meta">1994 · 384 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--historia" data-id="17" data-titulo="Sapiens" data-autor="Yuval Noah Harari" data-genero="historia" data-anio="2011" data-paginas="496" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">S</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Historia</span>
+              <h3 class="libro__titulo">Sapiens</h3>
+              <p class="libro__autor">Yuval Noah Harari</p>
+              <p class="libro__meta">2011 · 496 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--historia" data-id="18" data-titulo="Armas, gérmenes y acero" data-autor="Jared Diamond" data-genero="historia" data-anio="1997" data-paginas="480" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">A</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Historia</span>
+              <h3 class="libro__titulo">Armas, gérmenes y acero</h3>
+              <p class="libro__autor">Jared Diamond</p>
+              <p class="libro__meta">1997 · 480 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--historia" data-id="19" data-titulo="Las venas abiertas de América Latina" data-autor="Eduardo Galeano" data-genero="historia" data-anio="1971" data-paginas="400" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">L</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Historia</span>
+              <h3 class="libro__titulo">Las venas abiertas de América Latina</h3>
+              <p class="libro__autor">Eduardo Galeano</p>
+              <p class="libro__meta">1971 · 400 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--historia" data-id="20" data-titulo="Los cañones de agosto" data-autor="Barbara Tuchman" data-genero="historia" data-anio="1962" data-paginas="606" data-estado="prestado">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">L</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Historia</span>
+              <h3 class="libro__titulo">Los cañones de agosto</h3>
+              <p class="libro__autor">Barbara Tuchman</p>
+              <p class="libro__meta">1962 · 606 págs.</p>
+              <span class="libro__estado libro__estado--prestado">Prestado</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--historia" data-id="21" data-titulo="SPQR" data-autor="Mary Beard" data-genero="historia" data-anio="2015" data-paginas="608" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">S</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Historia</span>
+              <h3 class="libro__titulo">SPQR</h3>
+              <p class="libro__autor">Mary Beard</p>
+              <p class="libro__meta">2015 · 608 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--historia" data-id="22" data-titulo="La Segunda Guerra Mundial" data-autor="Antony Beevor" data-genero="historia" data-anio="2012" data-paginas="976" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">L</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Historia</span>
+              <h3 class="libro__titulo">La Segunda Guerra Mundial</h3>
+              <p class="libro__autor">Antony Beevor</p>
+              <p class="libro__meta">2012 · 976 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--historia" data-id="23" data-titulo="Los orígenes del totalitarismo" data-autor="Hannah Arendt" data-genero="historia" data-anio="1951" data-paginas="704" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">L</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Historia</span>
+              <h3 class="libro__titulo">Los orígenes del totalitarismo</h3>
+              <p class="libro__autor">Hannah Arendt</p>
+              <p class="libro__meta">1951 · 704 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--historia" data-id="24" data-titulo="Homo Deus" data-autor="Yuval Noah Harari" data-genero="historia" data-anio="2015" data-paginas="496" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">H</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Historia</span>
+              <h3 class="libro__titulo">Homo Deus</h3>
+              <p class="libro__autor">Yuval Noah Harari</p>
+              <p class="libro__meta">2015 · 496 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--infantil" data-id="25" data-titulo="El Principito" data-autor="Antoine de Saint-Exupéry" data-genero="infantil" data-anio="1943" data-paginas="96" data-estado="prestado">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">E</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Infantil</span>
+              <h3 class="libro__titulo">El Principito</h3>
+              <p class="libro__autor">Antoine de Saint-Exupéry</p>
+              <p class="libro__meta">1943 · 96 págs.</p>
+              <span class="libro__estado libro__estado--prestado">Prestado</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--infantil" data-id="26" data-titulo="Matilda" data-autor="Roald Dahl" data-genero="infantil" data-anio="1988" data-paginas="240" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">M</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Infantil</span>
+              <h3 class="libro__titulo">Matilda</h3>
+              <p class="libro__autor">Roald Dahl</p>
+              <p class="libro__meta">1988 · 240 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--infantil" data-id="27" data-titulo="Momo" data-autor="Michael Ende" data-genero="infantil" data-anio="1973" data-paginas="304" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">M</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Infantil</span>
+              <h3 class="libro__titulo">Momo</h3>
+              <p class="libro__autor">Michael Ende</p>
+              <p class="libro__meta">1973 · 304 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--infantil" data-id="28" data-titulo="La historia interminable" data-autor="Michael Ende" data-genero="infantil" data-anio="1979" data-paginas="496" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">L</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Infantil</span>
+              <h3 class="libro__titulo">La historia interminable</h3>
+              <p class="libro__autor">Michael Ende</p>
+              <p class="libro__meta">1979 · 496 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--infantil" data-id="29" data-titulo="Harry Potter y la piedra filosofal" data-autor="J. K. Rowling" data-genero="infantil" data-anio="1997" data-paginas="256" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">H</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Infantil</span>
+              <h3 class="libro__titulo">Harry Potter y la piedra filosofal</h3>
+              <p class="libro__autor">J. K. Rowling</p>
+              <p class="libro__meta">1997 · 256 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--infantil" data-id="30" data-titulo="Donde viven los monstruos" data-autor="Maurice Sendak" data-genero="infantil" data-anio="1963" data-paginas="48" data-estado="prestado">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">D</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Infantil</span>
+              <h3 class="libro__titulo">Donde viven los monstruos</h3>
+              <p class="libro__autor">Maurice Sendak</p>
+              <p class="libro__meta">1963 · 48 págs.</p>
+              <span class="libro__estado libro__estado--prestado">Prestado</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--infantil" data-id="31" data-titulo="Charlie y la fábrica de chocolate" data-autor="Roald Dahl" data-genero="infantil" data-anio="1964" data-paginas="176" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">C</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Infantil</span>
+              <h3 class="libro__titulo">Charlie y la fábrica de chocolate</h3>
+              <p class="libro__autor">Roald Dahl</p>
+              <p class="libro__meta">1964 · 176 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--infantil" data-id="32" data-titulo="Pippi Calzaslargas" data-autor="Astrid Lindgren" data-genero="infantil" data-anio="1945" data-paginas="160" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">P</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Infantil</span>
+              <h3 class="libro__titulo">Pippi Calzaslargas</h3>
+              <p class="libro__autor">Astrid Lindgren</p>
+              <p class="libro__meta">1945 · 160 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--poesia" data-id="33" data-titulo="Veinte poemas de amor y una canción desesperada" data-autor="Pablo Neruda" data-genero="poesia" data-anio="1924" data-paginas="80" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">V</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Poesía</span>
+              <h3 class="libro__titulo">Veinte poemas de amor y una canción desesperada</h3>
+              <p class="libro__autor">Pablo Neruda</p>
+              <p class="libro__meta">1924 · 80 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--poesia" data-id="34" data-titulo="Rimas y leyendas" data-autor="Gustavo Adolfo Bécquer" data-genero="poesia" data-anio="1871" data-paginas="240" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">R</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Poesía</span>
+              <h3 class="libro__titulo">Rimas y leyendas</h3>
+              <p class="libro__autor">Gustavo Adolfo Bécquer</p>
+              <p class="libro__meta">1871 · 240 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--poesia" data-id="35" data-titulo="Poeta en Nueva York" data-autor="Federico García Lorca" data-genero="poesia" data-anio="1940" data-paginas="160" data-estado="prestado">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">P</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Poesía</span>
+              <h3 class="libro__titulo">Poeta en Nueva York</h3>
+              <p class="libro__autor">Federico García Lorca</p>
+              <p class="libro__meta">1940 · 160 págs.</p>
+              <span class="libro__estado libro__estado--prestado">Prestado</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--poesia" data-id="36" data-titulo="Hojas de hierba" data-autor="Walt Whitman" data-genero="poesia" data-anio="1855" data-paginas="480" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">H</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Poesía</span>
+              <h3 class="libro__titulo">Hojas de hierba</h3>
+              <p class="libro__autor">Walt Whitman</p>
+              <p class="libro__meta">1855 · 480 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--poesia" data-id="37" data-titulo="Altazor" data-autor="Vicente Huidobro" data-genero="poesia" data-anio="1931" data-paginas="112" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">A</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Poesía</span>
+              <h3 class="libro__titulo">Altazor</h3>
+              <p class="libro__autor">Vicente Huidobro</p>
+              <p class="libro__meta">1931 · 112 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--poesia" data-id="38" data-titulo="Piedra de sol" data-autor="Octavio Paz" data-genero="poesia" data-anio="1957" data-paginas="64" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">P</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Poesía</span>
+              <h3 class="libro__titulo">Piedra de sol</h3>
+              <p class="libro__autor">Octavio Paz</p>
+              <p class="libro__meta">1957 · 64 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--poesia" data-id="39" data-titulo="Campos de Castilla" data-autor="Antonio Machado" data-genero="poesia" data-anio="1912" data-paginas="200" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">C</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Poesía</span>
+              <h3 class="libro__titulo">Campos de Castilla</h3>
+              <p class="libro__autor">Antonio Machado</p>
+              <p class="libro__meta">1912 · 200 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--poesia" data-id="40" data-titulo="Trilce" data-autor="César Vallejo" data-genero="poesia" data-anio="1922" data-paginas="144" data-estado="prestado">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">T</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Poesía</span>
+              <h3 class="libro__titulo">Trilce</h3>
+              <p class="libro__autor">César Vallejo</p>
+              <p class="libro__meta">1922 · 144 págs.</p>
+              <span class="libro__estado libro__estado--prestado">Prestado</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--tecnologia" data-id="41" data-titulo="Código limpio" data-autor="Robert C. Martin" data-genero="tecnologia" data-anio="2008" data-paginas="464" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">C</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Tecnología</span>
+              <h3 class="libro__titulo">Código limpio</h3>
+              <p class="libro__autor">Robert C. Martin</p>
+              <p class="libro__meta">2008 · 464 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--tecnologia" data-id="42" data-titulo="El programador pragmático" data-autor="Andrew Hunt y David Thomas" data-genero="tecnologia" data-anio="1999" data-paginas="352" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">E</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Tecnología</span>
+              <h3 class="libro__titulo">El programador pragmático</h3>
+              <p class="libro__autor">Andrew Hunt y David Thomas</p>
+              <p class="libro__meta">1999 · 352 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--tecnologia" data-id="43" data-titulo="Eloquent JavaScript" data-autor="Marijn Haverbeke" data-genero="tecnologia" data-anio="2011" data-paginas="472" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">E</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Tecnología</span>
+              <h3 class="libro__titulo">Eloquent JavaScript</h3>
+              <p class="libro__autor">Marijn Haverbeke</p>
+              <p class="libro__meta">2011 · 472 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--tecnologia" data-id="44" data-titulo="JavaScript: the good parts" data-autor="Douglas Crockford" data-genero="tecnologia" data-anio="2008" data-paginas="176" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">J</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Tecnología</span>
+              <h3 class="libro__titulo">JavaScript: the good parts</h3>
+              <p class="libro__autor">Douglas Crockford</p>
+              <p class="libro__meta">2008 · 176 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--tecnologia" data-id="45" data-titulo="Introducción a los algoritmos" data-autor="Thomas H. Cormen et al." data-genero="tecnologia" data-anio="1990" data-paginas="1312" data-estado="prestado">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">I</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Tecnología</span>
+              <h3 class="libro__titulo">Introducción a los algoritmos</h3>
+              <p class="libro__autor">Thomas H. Cormen et al.</p>
+              <p class="libro__meta">1990 · 1312 págs.</p>
+              <span class="libro__estado libro__estado--prestado">Prestado</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--tecnologia" data-id="46" data-titulo="Patrones de diseño" data-autor="Erich Gamma et al." data-genero="tecnologia" data-anio="1994" data-paginas="416" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">P</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Tecnología</span>
+              <h3 class="libro__titulo">Patrones de diseño</h3>
+              <p class="libro__autor">Erich Gamma et al.</p>
+              <p class="libro__meta">1994 · 416 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--tecnologia" data-id="47" data-titulo="You Don’t Know JS Yet" data-autor="Kyle Simpson" data-genero="tecnologia" data-anio="2020" data-paginas="143" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">Y</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Tecnología</span>
+              <h3 class="libro__titulo">You Don’t Know JS Yet</h3>
+              <p class="libro__autor">Kyle Simpson</p>
+              <p class="libro__meta">2020 · 143 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+          <article class="libro libro--tecnologia" data-id="48" data-titulo="HTML y CSS: diseño y creación de sitios web" data-autor="Jon Duckett" data-genero="tecnologia" data-anio="2011" data-paginas="490" data-estado="disponible">
+            <div class="libro__portada" aria-hidden="true"><span class="libro__inicial">H</span></div>
+            <div class="libro__cuerpo">
+              <span class="libro__genero">Tecnología</span>
+              <h3 class="libro__titulo">HTML y CSS: diseño y creación de sitios web</h3>
+              <p class="libro__autor">Jon Duckett</p>
+              <p class="libro__meta">2011 · 490 págs.</p>
+              <span class="libro__estado libro__estado--disponible">Disponible</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <p class="text-center text-secondary mt-4 d-none" id="sin-resultados">No encontramos libros con esa búsqueda.</p>
+    </div>
+  </section>
+
+  <!-- ===== CTA ===== -->
+  <section class="py-5 mb-5">
+    <div class="container">
+      <div class="cta-final p-5 text-center reveal">
+        <div class="row justify-content-center position-relative">
+          <div class="col-lg-8">
+            <h2 class="section-title" style="color:#fff">¿No sabes por dónde empezar?</h2>
+            <p class="mb-4" style="color:rgba(255,255,255,.8)">Cuéntanos qué te gusta leer y te preparamos una selección personalizada sin coste.</p>
+            <a href="contacto.html" class="btn-aurora">Pedir recomendación <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <!-- ===== Footer ===== -->
+  <footer class="footer pt-5 mt-5">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-4">
+          <h5 class="mb-3">Biblioteca <span style="color:var(--gold-soft)">Aurora</span></h5>
+          <p class="small" style="max-width:300px">Desde 1998 fomentamos la lectura, el aprendizaje y la cultura en nuestra comunidad. Un espacio para leer, estudiar y crecer.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a class="social-btn" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="social-btn" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-btn" href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="social-btn" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Explorar</h5>
+          <ul class="list-unstyled d-grid gap-2 small">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5>Servicios</h5>
+          <ul class="list-unstyled d-grid gap-2 small">
+            <li><a href="productos.html">Préstamo de libros</a></li>
+            <li><a href="productos.html">Sala de estudio 24/7</a></li>
+            <li><a href="productos.html">Clubes de lectura</a></li>
+            <li><a href="productos.html">Biblioteca digital</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Contacto</h5>
+          <ul class="list-unstyled d-grid gap-2 small">
+            <li><i class="fa-solid fa-location-dot me-2" style="color:var(--gold-soft)"></i>Av. de los Libros 123, Centro, Ciudad</li>
+            <li><i class="fa-solid fa-phone me-2" style="color:var(--gold-soft)"></i>+34 910 000 000</li>
+            <li><i class="fa-solid fa-envelope me-2" style="color:var(--gold-soft)"></i>hola@bibliotecaaurora.es</li>
+            <li><i class="fa-solid fa-clock me-2" style="color:var(--gold-soft)"></i>Lun–Vie 9:00–21:00 · Sáb 10:00–14:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom py-3 small d-flex flex-column flex-md-row justify-content-between gap-2">
+        <span>© 2026 Biblioteca Aurora. Todos los derechos reservados.</span>
+        <span><a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></span>
+      </div>
+    </div>
+  </footer>
+  <script src="js/filtros.js"></script>
+</body>
+</html>

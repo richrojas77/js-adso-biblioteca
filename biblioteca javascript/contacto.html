@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto — Escríbenos, llámanos o visítanos | Biblioteca Aurora</title>
+  <meta name="description" content="Contacta con Biblioteca Aurora: formulario, teléfono, dirección, horarios, mapa de ubicación y redes sociales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-aurora fixed-top" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Biblioteca <span>Aurora</span></a>
+      <input type="checkbox" id="navToggle" class="nav-check visually-hidden" aria-label="Abrir menú">
+      <label class="navbar-toggler border-0" for="navToggle"><i class="fa-solid fa-bars fa-lg" style="color:var(--ink)"></i></label>
+      <div class="navbar-collapse" id="mainNav">
+        <form class="buscador me-lg-3 my-3 my-lg-0" role="search" action="productos.html" method="get">
+          <label for="buscador" class="visually-hidden">Buscar libros</label>
+          <input type="search" id="buscador" name="q" class="buscador__input" placeholder="Buscar libros…" autocomplete="off">
+          <button type="submit" class="buscador__btn" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0"><a class="nav-link btn-nav" href="contacto.html"><i class="fa-solid fa-book-open-reader me-2"></i>Hazte socio</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <main id="contenido">
+  <!-- ===== Hero de página ===== -->
+  <header class="page-hero">
+    <div class="container">
+      <nav aria-label="breadcrumb"><ol class="breadcrumb mb-3"><li class="breadcrumb-item"><a href="index.html">Inicio</a></li><li class="breadcrumb-item active">Contacto</li></ol></nav>
+      <div class="col-lg-7">
+        <span class="eyebrow">Contacto</span>
+        <h1 class="section-title mb-3">Hablemos de tu próxima lectura</h1>
+        <p class="lead-text">Escríbenos, llámanos o visítanos. Respondemos en menos de 24 horas laborables.</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== Info + Formulario ===== -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 mb-4">
+        <div class="col-md-6 col-lg-3 reveal"><div class="info-tile">
+          <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+          <div><strong class="d-block mb-1" style="color:var(--ink)">Dirección</strong><small class="text-secondary">Av. de los Libros 123, Centro, 28001 Ciudad</small></div>
+        </div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="info-tile">
+          <div class="icon"><i class="fa-solid fa-phone"></i></div>
+          <div><strong class="d-block mb-1" style="color:var(--ink)">Teléfono</strong><small class="text-secondary">+34 910 000 000<br>Lun–Sáb en horario de apertura</small></div>
+        </div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="info-tile">
+          <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+          <div><strong class="d-block mb-1" style="color:var(--ink)">Correo</strong><small class="text-secondary">hola@bibliotecaaurora.es<br>socios@bibliotecaaurora.es</small></div>
+        </div></div>
+        <div class="col-md-6 col-lg-3 reveal"><div class="info-tile">
+          <div class="icon"><i class="fa-solid fa-clock"></i></div>
+          <div><strong class="d-block mb-1" style="color:var(--ink)">Horarios</strong><small class="text-secondary">Lun–Vie 9:00–21:00<br>Sáb 10:00–14:00 · Dom cerrado</small></div>
+        </div></div>
+      </div>
+
+      <div class="row g-5">
+        <!-- Formulario -->
+        <div class="col-lg-6 reveal">
+          <div class="card-aurora" style="padding:2.5rem">
+            <h2 class="h4 mb-1">Envíanos un mensaje</h2>
+            <p class="small text-secondary mb-4">Rellena el formulario y te contestaremos lo antes posible.</p>
+            <div id="enviado" class="alert alert-ok mb-4" role="status" style="background:#e8f5e9;color:#2e7d32;border-radius:12px">
+              <i class="fa-solid fa-circle-check me-2"></i><strong>¡Mensaje enviado!</strong> Gracias por escribirnos. Te responderemos en menos de 24 horas laborables.
+            </div>
+            <form id="contactForm" action="https://formspree.io/f/TU_ID" method="post">
+              <input type="hidden" name="_next" value="https://TU-DOMINIO/contacto.html#enviado">
+              <input type="text" name="_gotcha" class="d-none" tabindex="-1" autocomplete="off">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre completo *</label>
+                  <input type="text" class="form-control-aurora" id="nombre" name="nombre" autocomplete="name" placeholder="María García" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Correo electrónico *</label>
+                  <input type="email" class="form-control-aurora" id="email" name="email" autocomplete="email" placeholder="maria@email.com" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="telefono" class="form-label">Teléfono (opcional)</label>
+                  <input type="tel" class="form-control-aurora" id="telefono" name="telefono" autocomplete="tel" placeholder="+34 600 000 000">
+                </div>
+                <div class="col-md-6">
+                  <label for="asunto" class="form-label">Asunto</label>
+                  <select class="form-control-aurora" id="asunto" name="asunto">
+                    <option>Quiero hacerme socio</option>
+                    <option>Consulta sobre préstamos</option>
+                    <option>Clubes de lectura y eventos</option>
+                    <option>Alianzas y empresas</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label for="mensaje" class="form-label">Mensaje *</label>
+                  <textarea class="form-control-aurora" id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos en qué podemos ayudarte…" required minlength="10"></textarea>
+                </div>
+                <div class="col-12 form-check ms-2">
+                  <input class="form-check-input" type="checkbox" id="privacidad" name="privacidad" required>
+                  <label class="form-check-label small text-secondary" for="privacidad">He leído y acepto la <a href="#" style="color:var(--gold-text)">política de privacidad</a> *</label>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn-aurora w-100 justify-content-center">Enviar mensaje <i class="fa-solid fa-paper-plane"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Mapa + redes -->
+        <div class="col-lg-6 reveal">
+          <div class="map-frame mb-4">
+            <iframe title="Mapa de ubicación de Biblioteca Aurora" src="https://www.openstreetmap.org/export/embed.html?bbox=-3.7100%2C40.4100%2C-3.6900%2C40.4250&layer=mapnik&marker=40.4175%2C-3.7000" loading="lazy"></iframe>
+          </div>
+          <div class="card-aurora" style="padding:1.8rem">
+            <h3 class="h5 mb-3">Síguenos en redes</h3>
+            <p class="small text-secondary mb-3">Novedades del catálogo, eventos y recomendaciones semanales de lectura.</p>
+            <div class="d-flex flex-wrap gap-2">
+              <a class="social-btn" style="background:var(--ivory-deep);color:var(--ink)" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a class="social-btn" style="background:var(--ivory-deep);color:var(--ink)" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a class="social-btn" style="background:var(--ivory-deep);color:var(--ink)" href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+              <a class="social-btn" style="background:var(--ivory-deep);color:var(--ink)" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              <a class="social-btn" style="background:var(--ivory-deep);color:var(--ink)" href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a class="social-btn" style="background:var(--ivory-deep);color:var(--ink)" href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <hr class="my-4" style="border-color:var(--ivory-deep)">
+            <h4 class="h6 mb-2"><i class="fa-solid fa-train me-2" style="color:var(--gold-text)"></i>Cómo llegar</h4>
+            <p class="small text-secondary mb-0">Metro Línea 1 y 3 · Estación Centro (salida Calle Mayor) · Bus 15, 27 y 45 · BiciMAD estación 42 a 50 metros.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+  <!-- ===== Footer ===== -->
+  <footer class="footer pt-5 mt-5">
+    <div class="container">
+      <div class="row g-4 pb-4">
+        <div class="col-lg-4">
+          <h5 class="mb-3">Biblioteca <span style="color:var(--gold-soft)">Aurora</span></h5>
+          <p class="small" style="max-width:300px">Desde 1998 fomentamos la lectura, el aprendizaje y la cultura en nuestra comunidad. Un espacio para leer, estudiar y crecer.</p>
+          <div class="d-flex gap-2 mt-3">
+            <a class="social-btn" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a class="social-btn" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-btn" href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="social-btn" href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Explorar</h5>
+          <ul class="list-unstyled d-grid gap-2 small">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="clientes.html">Clientes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5>Servicios</h5>
+          <ul class="list-unstyled d-grid gap-2 small">
+            <li><a href="productos.html">Préstamo de libros</a></li>
+            <li><a href="productos.html">Sala de estudio 24/7</a></li>
+            <li><a href="productos.html">Clubes de lectura</a></li>
+            <li><a href="productos.html">Biblioteca digital</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Contacto</h5>
+          <ul class="list-unstyled d-grid gap-2 small">
+            <li><i class="fa-solid fa-location-dot me-2" style="color:var(--gold-soft)"></i>Av. de los Libros 123, Centro, Ciudad</li>
+            <li><i class="fa-solid fa-phone me-2" style="color:var(--gold-soft)"></i>+34 910 000 000</li>
+            <li><i class="fa-solid fa-envelope me-2" style="color:var(--gold-soft)"></i>hola@bibliotecaaurora.es</li>
+            <li><i class="fa-solid fa-clock me-2" style="color:var(--gold-soft)"></i>Lun–Vie 9:00–21:00 · Sáb 10:00–14:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom py-3 small d-flex flex-column flex-md-row justify-content-between gap-2">
+        <span>© 2026 Biblioteca Aurora. Todos los derechos reservados.</span>
+        <span><a href="#">Aviso legal</a> · <a href="#">Privacidad</a> · <a href="#">Cookies</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
